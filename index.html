@@ -7,12 +7,9 @@
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     child-src www.twitch.tv
     child-src player.twitch.tv
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>yousuck.gg</title>
   </head>
   <body>
-
     <!-- __________________________________ Styles_________________________________-->
     
     <style>
@@ -21,13 +18,11 @@
     margin: 0px;
     padding: 0px;
     }
-
     body {
         background-color: #000000;
         height: 100vh;
         overflow: hidden;
     }
-
     .stream-1, .stream-2 {
         display: block;
         width: 44.9%;
@@ -36,40 +31,36 @@
         margin-right: auto;
         top: 0
     }
-
     .chat-1, .chat-2 {
-        display: hidden;
+        position: fixed;
         width: 28%;
         height: 100vh;
         top: 0;
     }
-
     .chat-1 {
         left: 0;
     }
-
     .chat-2 {
         right: 0;
-      }
+    }
+      
     </style>
     <!-- _______________________________ End Of Styles _________________________________-->
     
     
     <!-- _________________________________ Streams _________________________________-->
               
-
                                     <!-- _ Stream 1 _ -->
     <iframe class="stream-1" src="https://player.twitch.tv/?channel=wafflemagik&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="1920" width="1080"></iframe>
 
 
                                     <!-- _ Stream 2 _ -->
+    <iframe class="stream-2" src="https://player.twitch.tv/?channel=ravspect&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="1920" width="1080"></iframe>
     <iframe class="stream-2" src="https://player.twitch.tv/?channel=wafflemagik&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="1920" width="1080"></iframe>
 
     <!-- ______________________________ End of Streams _____________________________-->
 
-
     <!-- __________________________________ Chats __________________________________-->
-
                                      <!-- _ Chat 1 _ -->
     <iframe
       class="chat-1"
@@ -78,16 +69,15 @@
       height="750"
       width="300">
     </iframe>
-
                                      <!-- _ Chat 2 _ -->
     <iframe
       class="chat-2"
       id="twitch-chat-embed"
+      src="https://www.twitch.tv/embed/ravspect/chat?darkpopout&parent=bluefog12.github.io"
       src="https://www.twitch.tv/embed/wafflemagik/chat?darkpopout&parent=bluefog12.github.io"
       height="750"
       width="300">
     </iframe>
-
     <!-- _______________________________ End Of Chats ____________________________-->
   </body>
 </html>
