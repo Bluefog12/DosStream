@@ -14,8 +14,8 @@ Find line 16 and 20 in index.html
 They should look like this:  
 
 
-<iframe class="stream-1" src="https://player.twitch.tv/?channel=[Channel]&parent=127.0.0.1"... <br />
-<iframe class="stream-2" src="https://player.twitch.tv/?channel=[Channel]&parent=127.0.0.1"... <br />
+<iframe class="stream-1" src="https://player.twitch.tv/?channel=[Channel]&parent=bluefog12.github.io"... <br />
+<iframe class="stream-2" src="https://player.twitch.tv/?channel=[Channel]&parent=bluefog12.github.io"... <br />
 <br />
 
 Change "[Channel]" to whatever twitch channel you want to see <br />
@@ -30,7 +30,7 @@ This changes the stream but not the chat <br />
 Find line 31 and 40 in index.html (same as before)
 They should look like this:
 
-src="https://www.twitch.tv/embed/[Channel]/chat?darkpopout&parent=127.0.0.1"
+src="https://www.twitch.tv/embed/[Channel]/chat?darkpopout&parent=bluefog12.github.io"
                                   
 Change "[Channel]" to whatever twitch channel you want to see <br />
 This changes the chat <br />
