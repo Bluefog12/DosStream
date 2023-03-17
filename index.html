@@ -61,7 +61,19 @@
               
 
                                     <!-- _ Stream 1 _ -->
-    <iframe class="stream-1" src="https://player.twitch.tv/?channel=wafflemagik&parent=bluefog12" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+      <div id="SamplePlayerDivID"></div>
+      <script type="text/javascript">
+        var options = {
+          width: 854,
+          height: 480,
+          channel: "WaffleMagik",
+          // Only needed if this page is going to be embedded on other websites
+          parent: ["https://bluefog12.github.io/DosStream/"]
+        };
+        var player = new Twitch.Player("SamplePlayerDivID", options);
+        player.setVolume(0.5);
+      </script>
 
 
 
