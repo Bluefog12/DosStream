@@ -20,10 +20,6 @@ They should look like this:
 
 Change "[Channel]" to whatever twitch channel you want to see <br />
 This changes the stream but not the chat <br />
-> **Note** </br> 
-> You only need to add the streamer's name <br />
-> Remove these "[ ]"
-
 
 # Change the Twitch Chats
 
@@ -34,6 +30,3 @@ src="https://www.twitch.tv/embed/[Channel]/chat?darkpopout&parent=bluefog12.gith
                                   
 Change "[Channel]" to whatever twitch channel you want to see <br />
 This changes the chat <br />
-> **Note** </br>
-> You only need to add the streamer's name <br />
-> Remember to remove these "[ ]"
