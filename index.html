@@ -8,42 +8,89 @@
 <body>
   
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
+body {
+  background-color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+}
 
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-    }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
 
-    .stream-container {
-      width: calc(100% / 3 - 20px);
-      margin: 10px;
-    }
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
 
-    .stream-container iframe {
-      width: 100%;
-      height: 100%;
-    }
+header p {
+  font-size: 1.5rem;
+  margin: 0;
+}
 
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 1rem;
+}
+
+.stream-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem;
+  padding-bottom: 56.25%;
+}
+
+.stream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.chat iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 1rem 0;
+  }
+
+  .stream-container {
+    max-width: 100%;
+  }
+
+  .chat {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+}
   </style>
   
   <script>
@@ -66,20 +113,21 @@
   </header>
 
   <!-- Main content -->
-  <main>
-    <!-- Stream container -->
-    <div class="stream-container">
-      <!-- Stream embed code for stream 1 goes here -->
-      <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-    </div>
-    <div class="stream-container">
-      <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-    </div>
-    <div class="stream-container">
-      <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-    </div>
-
-  </main>
+  <div class="stream-container">
+      <div class="stream">
+        <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true"></iframe>
+        <div class="chat">
+          <iframe frameborder="0" scrolling="no" src="https://www.twitch.tv/embed/bigfatcelestial/chat" height="100%"></iframe>
+        </div>
+      </div>
+    
+   <div class="stream-container">
+      <div class="stream">
+        <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true"></iframe>
+        <div class="chat">
+          <iframe frameborder="0" scrolling="no" src="https://www.twitch.tv/embed/bigfatcelestial/chat" height="100%"></iframe>
+        </div>
+      </div>
 
   <!-- Footer -->
   <footer>
