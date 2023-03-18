@@ -10,7 +10,7 @@ For now i have included instructions on how to change the streams manually
 
 # Change the Twitch Streams
 
-Find line 16 and 20 in index.html  
+Find line 54 and 57 in index.html  
 They should look like this:  
 
 
@@ -23,7 +23,7 @@ This changes the stream but not the chat <br />
 
 # Change the Twitch Chats
 
-Find line 31 and 40 in index.html (same as before)
+Find line 67 and 75 in index.html (same as before)
 They should look like this:
 
 src="https://www.twitch.tv/embed/[Channel]/chat?darkpopout&parent=bluefog12.github.io"
