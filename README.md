@@ -1,4 +1,4 @@
-# Multistream
+# Yousuck.gg
 
 You can use this to view 2 twitch streams at once. <br/>
 <br/>
