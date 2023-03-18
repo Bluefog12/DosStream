@@ -1,82 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    child-src www.twitch.tv
-    child-src player.twitch.tv
-    <title>yousuck.gg</title>
-  </head>
-  <body>
-    <!-- __________________________________ Styles_________________________________-->
-    
-    <style>
-    * {
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    }
+<html>
+<head>
+  <title>YouSuck.gg</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+  <style>
     body {
-        background-color: #000000;
-        height: 100vh;
-        overflow: hidden;
+      margin: 0;
+      padding: 0;
     }
-    .stream-1, .stream-2 {
-        display: block;
-        width: 44.9%;
-        height: 50vh;
-        margin-left: auto;
-        margin-right: auto;
-        top: 0
-    }
-    .chat-1, .chat-2 {
-        position: fixed;
-        width: 28%;
-        height: 100vh;
-        top: 0;
-    }
-    .chat-1 {
-        left: 0;
-    }
-    .chat-2 {
-        right: 0;
-    }
-      
-    </style>
-    <!-- _______________________________ End Of Styles _________________________________-->
-    
-    
-    <!-- _________________________________ Streams _________________________________-->
-              
-                                    <!-- _ Stream 1 _ -->
-    <iframe class="stream-1" src="https://player.twitch.tv/?channel=ezosito&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="1920" width="1080"></iframe>
-    
-                                    <!-- _ Stream 2 _ -->
-    <iframe class="stream-2" src="https://player.twitch.tv/?channel=stelliferovs&parent=bluefog12.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="1920" width="1080"></iframe>
 
-    <!-- ______________________________ End of Streams _____________________________-->
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
 
-    <!-- __________________________________ Chats __________________________________-->
-    
-                                     <!-- _ Chat 1 _ -->
-    <iframe
-      class="chat-1"
-      id="twitch-chat-embed"
-      src="https://www.twitch.tv/embed/ezosito/chat?darkpopout&parent=bluefog12.github.io"
-      height="750"
-      width="300">
-    </iframe>
-                                     <!-- _ Chat 2 _ -->
-    <iframe
-      class="chat-2"
-      id="twitch-chat-embed"
-      src="https://www.twitch.tv/embed/mousiefuzz/chat?darkpopout&parent=bluefog12.github.io"
-      height="750"
-      width="300">
-    </iframe>
-    
-    <!-- _______________________________ End Of Chats ____________________________-->
-  </body>
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .stream-container {
+      width: calc(100% / 3 - 20px);
+      margin: 10px;
+    }
+
+    .stream-container iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  
+  <script>
+    // Get references to all stream containers
+    const streamContainers = document.querySelectorAll(".stream-container");
+
+    // Loop through all stream containers and add an iframe for each one
+    for (let i = 0; i < streamContainers.length; i++) {
+      const streamEmbedCode = getStreamEmbedCode(i + 1); // Replace with your own function to get the embed code for each stream
+      const streamIframe = document.createElement("iframe");
+      streamIframe.setAttribute("src", streamEmbedCode);
+      streamIframe.setAttribute("allowfullscreen", "");
+      streamContainers[i].appendChild(streamIframe);
+    }
+  </script>
+  
+  <!-- Header -->
+  <header>
+    <h1>Multi-stream Viewer</h1>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Stream container -->
+    <div class="stream-container">
+      <!-- Stream embed code for stream 1 goes here -->
+      <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    </div>
+    <div class="stream-container">
+      <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    </div>
+    <div class="stream-container">
+      <iframe src="https://player.twitch.tv/?channel=bigfatcelestial&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 YouSuck.gg</p>
+  </footer>
+  
+</body>
 </html>
